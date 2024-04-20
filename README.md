@@ -68,7 +68,6 @@
 ### Non-standard functions
 
 * [`ft_swap`](ft_swap.c) *			- swap value of two integers.
-* [`ft_putchar`](ft_putchar.c) *	- output a character to stdout.
 * [`ft_putchar_fd`](ft_putchar_fd.c)		- output a character to given file.
 * [`ft_putstr`](ft_putstr.c) *		- output string to stdout.
 * [`ft_putstr_fd`](ft_putstr_fd.c)		- output string to given file.
