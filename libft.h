@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/03/17 14:11:55 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/04/28 16:12:56 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int					ft_isdigit(int i);
 int					ft_isprint(int i);
 int					ft_toupper(int i);
 int					ft_tolower(int i);
-int					ft_lstsize(t_list *lst);
 char				*ft_strtrim(char const *s1, char const *set);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
@@ -74,5 +73,6 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 int					ft_lstsize(t_list *lst);
+int					list_sorted(t_list *lst);
 
 #endif

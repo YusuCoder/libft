@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
+/*   ft_sorted_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/13 13:43:19 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/04/28 17:04:24 by ryusupov         ###   ########.fr       */
+/*   Created: 2024/04/28 14:56:10 by ryusupov          #+#    #+#             */
+/*   Updated: 2024/04/28 17:12:57 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+int	list_sorted(t_list *lst)
 {
-	if (!lst)
+	while (lst->next != NULL)
 	{
-		return ;
+		if (lst->content > lst->next->content)
+		{
+			return (0);
+		}
+		lst = lst->next;
 	}
-	del(lst->content);
-	free(lst);
+	return (1);
 }
