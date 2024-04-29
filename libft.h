@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/04/28 16:12:56 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/04/29 17:17:27 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}	t_list;
+}					t_list;
 
 /*---------------MANDATORY PART------------------*/
 
@@ -38,6 +38,7 @@ void				ft_putendl_fd(char *s1, int fd);
 void				ft_putnbr_fd(int n, int fd);
 void				*ft_calloc(size_t count, size_t size);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int					ft_strcmp(const char *str1, const char *str2);
 int					ft_isalnum(int i);
 int					ft_isalpha(int i);
 int					ft_isascii(int i);
@@ -69,8 +70,8 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list *lst, void (*del)(void*));
-void				ft_lstclear(t_list **lst, void (*del)(void*));
+void				ft_lstdelone(t_list *lst, void (*del)(void *));
+void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 int					ft_lstsize(t_list *lst);
 int					list_sorted(t_list *lst);
