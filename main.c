@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 16:57:22 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/04/28 17:14:19 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/04/30 11:44:08 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,24 @@
 // 		printf("Error: List is not empty after clearing.\n");
 // 	}
 // 	return (0);
+// }
+
+// int	main(void)
+// {
+// 	t_list	*list1;
+// 	t_list	*list2;
+// 	t_list	*list3;
+// 	int		result;
+
+// 	list1 = malloc(sizeof(t_list));
+// 	list1->content = (void *)2;
+// 	list2 = malloc(sizeof(t_list));
+// 	list1->next = list2;
+// 	list2->content = (void *)1;
+// 	list3 = malloc(sizeof(t_list));
+// 	list2->next = list3;
+// 	list3->content = (void *)3;
+// 	list3->next = NULL;
+// 	result = ft_lstsize(list1);
+// 	printf("%d", result);
 // }
