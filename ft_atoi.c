@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 21:59:34 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 10:54:33 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:02:32 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ int	ft_atoi(const char *str)
 		i += *str - 48;
 		str++;
 	}
-	return (sign * i);
+	return (i * sign);
 }
