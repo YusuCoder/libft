@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 12:22:57 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:48:08 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:39:50 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 	it returns NULL, indicating that there's no last element to find.
 */
 
-t_list	*ft_lstlast(t_list *lst)
+t_ryusupov	*ft_lstlast(t_ryusupov *lst)
 {
-	t_list	*last;
+	t_ryusupov	*last;
 
 	if (!lst)
 	{

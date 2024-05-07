@@ -6,16 +6,16 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 13:55:03 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:47:41 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:39:19 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_ryusupov **lst, void (*del)(void *))
 {
-	t_list	*i;
-	t_list	*nn;
+	t_ryusupov	*i;
+	t_ryusupov	*nn;
 
 	if (!*lst)
 	{
@@ -36,8 +36,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	int		data1;
 	int		data2;
 	int		data3;
-	t_list	*head;
-	t_list	*temp;
+	t_ryusupov	*head;
+	t_ryusupov	*temp;
 
 	data1 = 10;
 	data2 = 20;

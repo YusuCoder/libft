@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:32:09 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:52:26 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:39:57 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 	it deallocates any allocated memory and returns NULL to indicate failure.
 */
 
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_ryusupov	*ft_lstmap(t_ryusupov *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*i;
-	t_list	*n;
+	t_ryusupov	*i;
+	t_ryusupov	*n;
 	void	*e;
 
 	i = (void *)0;

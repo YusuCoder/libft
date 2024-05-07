@@ -6,13 +6,13 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/28 14:56:10 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:48:55 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:40:30 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	list_sorted(t_list *lst)
+int	list_sorted(t_ryusupov *lst)
 {
 	while (lst->next != NULL)
 	{

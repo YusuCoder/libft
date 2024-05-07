@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:49:34 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/05 13:42:05 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,19 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
+// #include "../ryusupov.h"
+
+typedef struct s_ryusupov
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	int					r_content;
+	int					i;
+	int					r_pos;
+	int					r_target_pos;
+	int					r_cost_a;
+	int					r_cost_b;
+	void				*content;
+	struct s_ryusupov	*next;
+}						t_ryusupov;
 
 /*---------------MANDATORY PART------------------*/
 
@@ -56,6 +64,7 @@ char				*ft_strdup(const char *s1);
 char				*ft_substr(char const *s1, unsigned int start, size_t len);
 char				*ft_strnstr(const char *hydr, const char *needle, size_t n);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_strcmp(const char *str1, const char *str2);
 char				*ft_strchr(const char *s, int i);
 char				*ft_strrchr(const char *p, int i);
 size_t				ft_strlcpy(char *to, const char *from, size_t dstsize);
@@ -64,16 +73,16 @@ size_t				ft_strlen(const char *str);
 
 /*-----------------BONUS PART-------------------*/
 
-t_list				*ft_lstnew(void *content);
-t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+t_ryusupov				*ft_lstnew(void *content);
+t_ryusupov				*ft_lstlast(t_ryusupov *lst);
+t_ryusupov				*ft_lstmap(t_ryusupov *lst, void *(*f)(void *),
 						void (*del)(void *));
-void				ft_lstadd_front(t_list **lst, t_list *new);
-void				ft_lstadd_back(t_list **lst, t_list *new);
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstclear(t_list **lst, void (*del)(void *));
-void				ft_lstiter(t_list *lst, void (*f)(void *));
-int					ft_lstsize(t_list *lst);
-int					list_sorted(t_list *lst);
+void				ft_lstadd_front(t_ryusupov **lst, t_ryusupov *new);
+void				ft_lstadd_back(t_ryusupov **lst, t_ryusupov *new);
+void				ft_lstdelone(t_ryusupov *lst, void (*del)(void *));
+void				ft_lstclear(t_ryusupov **lst, void (*del)(void *));
+void				ft_lstiter(t_ryusupov *lst, void (*f)(void *));
+int					ft_lstsize(t_ryusupov *lst);
+int					list_sorted(t_ryusupov *lst);
 
 #endif

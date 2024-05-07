@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 12:06:19 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:48:39 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:40:12 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 	an integer value. If the input list is empty, it returns 0,
 	indicating that the list has no elements.
 */
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(t_ryusupov *lst)
 {
 	int	i;
 

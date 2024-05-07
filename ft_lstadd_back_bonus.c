@@ -6,15 +6,15 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 12:35:36 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/01 14:47:24 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/04 20:37:45 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_ryusupov **lst, t_ryusupov *new)
 {
-	t_list	*new_n;
+	t_ryusupov	*new_n;
 
 	if (!lst || !new)
 	{
