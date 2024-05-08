@@ -6,7 +6,7 @@
 #    By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/12 20:08:19 by ryusupov          #+#    #+#              #
-#    Updated: 2024/05/05 15:40:11 by ryusupov         ###   ########.fr        #
+#    Updated: 2024/05/07 15:42:57 by ryusupov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ define ANIMATE_PROCESSING
 endef
 
 all: $(OBJ) $(BONUS_OBJ)
-	$(ANIMATE_WELCOME)
+#	$(ANIMATE_WELCOME)
 	@$(AR) $(NAME) $(OBJ) $(BONUS_OBJ)
 
 %.o: %.c $(INCS)
@@ -69,7 +69,7 @@ all: $(OBJ) $(BONUS_OBJ)
 
 clean:
 	@$(RM) $(OBJ) $(BONUS_OBJ)
-	$(ANIMATE_PROCESSING)
+#	$(ANIMATE_PROCESSING)
 
 fclean: clean
 	@$(RM) $(NAME)
