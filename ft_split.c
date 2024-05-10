@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:12:38 by ryusupov          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2024/05/10 12:42:06 by ryusupov         ###   ########.fr       */
+=======
+/*   Updated: 2024/05/10 10:56:23 by mac              ###   ########.fr       */
+>>>>>>> fcd146e382a642d8b38903f9adf6585a023edbed
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "string.h"
 
 /*
 	ft_split function splits a string into words based on a delimiter character
@@ -36,6 +41,8 @@ static int	colculated_words(const char *str, char c)
 		else
 			i++;
 	}
+	    // printf("Number of words: %d\n", count);
+
 	return (count);
 }
 
@@ -55,29 +62,38 @@ static void	free_array(char **array, size_t i)
 static char	**extracting(const char *s1, char **result, char c,
 			size_t words)
 {
-	size_t	i;
-	size_t	a;
-	size_t	counter;
+    size_t	i;
+    size_t	a;
+    size_t	counter;
+    size_t	start;
 
-	i = 0;
-	a = 0;
-	while (i < words)
-	{
-		counter = 0;
-		while (s1[a] && s1[a] == c)
-			a++;
-		while (s1[a] && s1[a] != c && ++counter)
-			a++;
-		result[i] = ft_substr(s1, a - counter, counter);
-		if (!result[i])
-		{
-			free_array(result, i);
-			return (NULL);
-		}
-		i++;
-	}
-	return (result);
+    i = 0;
+    a = 0;
+    while (i < words)
+    {
+        counter = 0;
+        while (s1[a] && s1[a] == c)
+            a++;
+        start = a;
+        while (s1[a] && s1[a] != c)
+        {
+            a++;
+            counter++;
+        }
+        result[i] = ft_substr(s1, start, counter);
+        if (!result[i])
+        {
+            free_array(result, i);
+            return (NULL);
+        }
+
+        // printf("Token %zu: %s\n", i, result[i]);
+
+        i++;
+    }
+    return (result);
 }
+
 
 char	**ft_split(char const *s1, char c)
 {
