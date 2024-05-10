@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:12:38 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/09 12:36:31 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/10 12:42:06 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ static void	free_array(char **array, size_t i)
 	free(array);
 }
 
-static char	**extracting(const char *s1, char **result, char c, size_t words)
+static char	**extracting(const char *s1, char **result, char c,
+			size_t words)
 {
 	size_t	i;
 	size_t	a;
