@@ -6,13 +6,13 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:16:30 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/07 15:25:12 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:06:04 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
- int	ft_strcmp(const char *str1, const char *str2)
+int	ft_strcmp(const char *str1, const char *str2)
 {
 	int	i;
 	int	a;

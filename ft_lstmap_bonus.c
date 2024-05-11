@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 15:32:09 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/04 20:39:57 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/11 20:03:51 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_ryusupov	*ft_lstmap(t_ryusupov *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_ryusupov	*i;
 	t_ryusupov	*n;
-	void	*e;
+	void		*e;
 
 	i = (void *)0;
 	while (lst)
