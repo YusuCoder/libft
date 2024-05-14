@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:12:38 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/11 20:03:17 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/14 18:07:24 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,3 +101,93 @@ char	**ft_split(char const *s1, char c)
 	}
 	return (extracting(s1, result, c, words));
 }
+
+// int ft_is_delimeter(char c)
+// {
+// 	return (c == ' ' || c == '\t' || c == '\n');
+// }
+
+// int ft_words_cout(char *str)
+// {
+// 	int i = 0;
+// 	int length = 0;
+// 	while (str[i])
+// 	{
+// 		if(!ft_is_delimeter(str[i]))
+// 		{
+// 			length++;
+// 			i++;
+// 		}
+// 		else
+// 			i++;
+// 	}
+// 	return (length);
+// }
+
+// char *ft_get_words(char *str)
+// {
+// 	int		i;
+// 	char	*word;
+
+// 	i = 0;
+// 	while (str[i] != '\0' && !ft_is_delimeter(str[i]))
+// 	{
+// 		i++;
+// 	}
+// 	word = (char *)malloc(sizeof(char) * (i + 1));
+// 	if(!word)
+// 		return (NULL);
+// 	i = 0;
+// 	while (str[i] != '\0' && !ft_is_delimeter(str[i]))
+// 	{
+// 		word[i] = str[i];
+// 		i++;
+// 	}
+// 	word[i] = '\0';
+// 	return (word);
+// }
+
+// char    **ft_split(char *str)
+// {
+//     int i = 0;
+//     char **split;
+
+//     split = (char **)malloc(sizeof(char *) * (ft_words_cout(str) + 1));
+//     if (!split)
+//         return (NULL);
+//     while (*str)
+//     {
+//         while (*str && ft_is_delimeter(*str))
+//         {
+//             str++;
+//         }
+//         if (*str)
+//         {
+//             split[i++] = ft_get_words(str);
+//             while (*str && !ft_is_delimeter(*str))
+//             {
+//                 str++;
+//             }
+//         }
+//     }
+//     split[i] = NULL;
+//     return (split);
+// }
+// int main() {
+//     char *str = "This is a sample string to split";
+//     char **split = ft_split(str);
+
+//     if (split) {
+//         int i = 0;
+//         while (split[i]) {
+//             printf("%s\n", split[i]);
+//             free(split[i]);
+//             i++;
+//         }
+//         free(split);
+//     } else {
+//         printf("Split failed.\n");
+//     }
+
+//     return 0;
+// }
