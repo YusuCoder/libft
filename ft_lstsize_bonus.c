@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/13 12:06:19 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/17 16:00:00 by mac              ###   ########.fr       */
+/*   Updated: 2024/05/18 14:55:21 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@
 	indicating that the list has no elements.
 */
 
-int ft_lstsize(t_ryusupov *lst)
+int	ft_lstsize(t_ryusupov *lst)
 {
-    int i;
-    t_ryusupov *temp;
+	int			i;
+	t_ryusupov	*temp;
 
-    i = 0;
-    temp = lst;
-    while (temp)
-    {
-        temp = temp->next;
-        i++;
-    }
-    return (i);
+	i = 0;
+	temp = lst;
+	while (temp)
+	{
+		temp = temp->next;
+		i++;
+	}
+	return (i);
 }
 
 // int	ft_lstsize(t_ryusupov *lst)
