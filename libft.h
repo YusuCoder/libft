@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/17 21:39:52 by mac              ###   ########.fr       */
+/*   Updated: 2024/05/20 13:59:04 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int						ft_toupper(int i);
 int						ft_tolower(int i);
 char					*ft_strtrim(char const *s1, char const *set);
 int						ft_atoi(const char *str);
+int long				ft_atol(const char *str);
 char					*ft_itoa(int n);
 char					*ft_strmapi(char const *s1, char (*f)(unsigned int,
 								char));
