@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 13:57:19 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/20 13:58:23 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/21 21:09:04 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 int long	ft_atol(const char *str)
 {
-	int long 	i;
+	int long	i;
 	int			sign;
 	int			counter;
 
