@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/20 13:59:04 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/24 13:06:27 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,11 @@
 
 typedef struct s_ryusupov
 {
-	int					r_content;
-	int					i;
-	int					r_pos;
-	int					r_target_pos;
-	int					r_cost_a;
-	int					r_cost_b;
+	void*				window;
+	void*				context;
+	int32_t				width;
+	int32_t				height;
+	double				delta_time;
 	void				*content;
 	struct s_ryusupov	*next;
 }						t_ryusupov;
