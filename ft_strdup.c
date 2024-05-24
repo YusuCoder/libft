@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 17:03:11 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/03/17 10:15:15 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/05/24 19:39:02 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,4 @@ char	*ft_strdup(const char *s1)
 	}
 	ft_memcpy(s2, s1, ft_strlen(s1) + 1);
 	return (s2);
-	free(s2);
 }

@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/24 13:06:27 by mac              ###   ########.fr       */
+/*   Updated: 2024/05/24 19:42:49 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
 
 # include <stdbool.h>
 # include <stddef.h>
@@ -27,6 +30,12 @@ typedef struct s_ryusupov
 	void*				context;
 	int32_t				width;
 	int32_t				height;
+	int					r_content;
+	int					i;
+	int					r_pos;
+	int					r_target_pos;
+	int					r_cost_a;
+	int					r_cost_b;
 	double				delta_time;
 	void				*content;
 	struct s_ryusupov	*next;
@@ -90,5 +99,18 @@ void					ft_lstclear(t_ryusupov **lst, void (*del)(void *));
 void					ft_lstiter(t_ryusupov *lst, void (*f)(void *));
 int						ft_lstsize(t_ryusupov *lst);
 int						list_sorted(t_ryusupov *lst);
+
+/*---------------GET_NEXT_LINE------------------*/
+typedef struct t_struct
+{
+	int		new_l_buffer;
+	int		fd;
+}			t_struct;
+
+t_struct	*get_t_struct(int new_fd);
+char		*ft_strjoin_new(char *s1, char *s2);
+char		*ft_strndup(char *str, int start, int end);
+char		*get_next_line(int fd);
+int			new_line(char *str);
 
 #endif
