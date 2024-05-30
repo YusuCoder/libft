@@ -28,8 +28,6 @@ typedef struct s_ryusupov
 {
 	void*				window;
 	void*				context;
-	int32_t				width;
-	int32_t				height;
 	int					r_content;
 	int					i;
 	int					r_pos;
@@ -38,9 +36,9 @@ typedef struct s_ryusupov
 	int					r_cost_b;
 	double				delta_time;
 	void				*content;
-	struct s_ryusupov	*next;
 	int					x;
 	int					y;
+	struct s_ryusupov	*next;
 }						t_ryusupov;
 
 /*---------------MANDATORY PART------------------*/
