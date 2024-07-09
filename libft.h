@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/29 13:46:52 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/07/09 13:14:16 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ char					*ft_strrchr(const char *p, int i);
 size_t					ft_strlcpy(char *to, const char *from, size_t dstsize);
 size_t					ft_strlcat(char *to, const char *from, size_t dstsize);
 size_t					ft_strlen(const char *str);
+char					*ft_strchr2(const char *str, char c);
 
 /*-----------------BONUS PART-------------------*/
 

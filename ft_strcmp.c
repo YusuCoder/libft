@@ -6,37 +6,11 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:16:30 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/11 20:06:04 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/07/08 19:04:22 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_strcmp(const char *str1, const char *str2)
-{
-	int	i;
-	int	a;
-
-	i = 0;
-	a = 0;
-	if (str1[i] == '+')
-	{
-		a = 0;
-		if (str2[a] != '+')
-			i++;
-	}
-	else
-	{
-		if (str2[a] == '+')
-			i++;
-	}
-	while (str1[i] != '\0' && str2[i] != '\0' && str1[i] == str2[a])
-	{
-		i++;
-		a++;
-	}
-	return ((unsigned char)str1[i] - (unsigned char)str2[a]);
-}
 
 // int	ft_strcmp(const char *str1, const char *str2)
 // {
@@ -44,16 +18,42 @@ int	ft_strcmp(const char *str1, const char *str2)
 // 	int	a;
 
 // 	i = 0;
-// 	while (str1[i])
+// 	a = 0;
+// 	if (str1[i] == '+')
 // 	{
 // 		a = 0;
-// 		while (str2[a])
-// 		{
-// 			if (str1[i] == str2[a])
-// 				return (str2[i] - str2[a]);
-// 			a++;
-// 		}
-// 		i++;
+// 		if (str2[a] != '+')
+// 			i++;
 // 	}
-// 	return (0);
+// 	else
+// 	{
+// 		if (str2[a] == '+')
+// 			i++;
+// 	}
+// 	while (str1[i] != '\0' && str2[i] != '\0' && str1[i] == str2[a])
+// 	{
+// 		i++;
+// 		a++;
+// 	}
+// 	return ((unsigned char)str1[i] - (unsigned char)str2[a]);
 // }
+
+int	ft_strcmp(const char *str1, const char *str2)
+{
+	int	i;
+	int	a;
+
+	i = 0;
+	while (str1[i])
+	{
+		a = 0;
+		while (str2[a])
+		{
+			if (str1[i] == str2[a])
+				return (str2[i] - str2[a]);
+			a++;
+		}
+		i++;
+	}
+	return (0);
+}
