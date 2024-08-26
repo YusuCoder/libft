@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:12:38 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/29 13:59:38 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:32:49 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,164 +19,164 @@
 	allocation and freeing appropriately to ensure no memory leaks occur.
 */
 
-// static int	count_words(char *s, char c)
-// {
-// 	int		count;
-// 	bool	inside_word;
-
-// 	count = 0;
-// 	while (*s)
-// 	{
-// 		inside_word = false;
-// 		while (*s == c)
-// 			++s;
-// 		while (*s != c && *s)
-// 		{
-// 			if (!inside_word)
-// 			{
-// 				++count;
-// 				inside_word = true;
-// 			}
-// 			++s;
-// 		}
-// 	}
-// 	return (count);
-// }
-
-// static char	*get_next_word(char *s, char c)
-// {
-// 	static int	cursor = 0;
-// 	char		*next_word;
-// 	int			len;
-// 	int			i;
-
-// 	len = 0;
-// 	i = 0;
-// 	while (s[cursor] == c)
-// 		++cursor;
-// 	while ((s[cursor + len] != c) && s[cursor + len])
-// 		++len;
-// 	next_word = malloc((size_t)len * sizeof(char) + 1);
-// 	if (!next_word)
-// 		return (NULL);
-// 	while ((s[cursor] != c) && s[cursor])
-// 		next_word[i++] = s[cursor++];
-// 	next_word[i] = '\0';
-// 	return (next_word);
-// }
-
-// char	**ft_split(char *s, char c)
-// {
-// 	int		words_count;
-// 	char	**result_array;
-// 	int		i;
-
-// 	i = 0;
-// 	words_count = count_words(s, c);
-// 	if (!words_count)
-// 		exit(1);
-// 	result_array = malloc(sizeof(char *) * (size_t)(words_count + 2));
-// 	if (!result_array)
-// 		return (NULL);
-// 	while (words_count-- >= 0)
-// 	{
-// 		if (i == 0)
-// 		{
-// 			result_array[i] = malloc(sizeof(char));
-// 			if (!result_array[i])
-// 				return (NULL);
-// 			result_array[i++][0] = '\0';
-// 			continue ;
-// 		}
-// 		result_array[i++] = get_next_word(s, c);
-// 	}
-// 	result_array[i] = NULL;
-// 	return (result_array);
-// }
-
-static int	colculated_words(const char *str, char c)
+static int	count_words(char *s, char c)
 {
-	int	count;
-	int	i;
+	int		count;
+	bool	inside_word;
 
 	count = 0;
-	i = 0;
-	while (str[i])
+	while (*s)
 	{
-		if (str[i] != c)
+		inside_word = false;
+		while (*s == c)
+			++s;
+		while (*s != c && *s)
 		{
-			count++;
-			while (str[i] && str[i] != c)
-				i++;
+			if (!inside_word)
+			{
+				++count;
+				inside_word = true;
+			}
+			++s;
 		}
-		else
-			i++;
 	}
 	return (count);
 }
 
-static void	free_array(char **array, size_t i)
+static char	*get_next_word(char *s, char c)
 {
-	if (!array)
-		return ;
+	static int	cursor = 0;
+	char		*next_word;
+	int			len;
+	int			i;
+
+	len = 0;
 	i = 0;
-	while (array[i] != NULL)
-	{
-		free(array[i]);
-		i++;
-	}
-	free(array);
+	while (s[cursor] == c)
+		++cursor;
+	while ((s[cursor + len] != c) && s[cursor + len])
+		++len;
+	next_word = malloc((size_t)len * sizeof(char) + 1);
+	if (!next_word)
+		return (NULL);
+	while ((s[cursor] != c) && s[cursor])
+		next_word[i++] = s[cursor++];
+	next_word[i] = '\0';
+	return (next_word);
 }
 
-static char	**extracting(const char *s1,
-char **result, char c, size_t words)
+char	**ft_split(char *s, char c)
 {
-	size_t	i;
-	size_t	a;
-	size_t	counter;
-	size_t	start;
+	int		words_count;
+	char	**result_array;
+	int		i;
 
 	i = 0;
-	a = 0;
-	while (i < words)
+	words_count = count_words(s, c);
+	if (!words_count)
+		exit(1);
+	result_array = malloc(sizeof(char *) * (size_t)(words_count + 2));
+	if (!result_array)
+		return (NULL);
+	while (words_count-- >= 0)
 	{
-		counter = 0;
-		while (s1[a] && s1[a] == c)
-			a++;
-		start = a;
-		while (s1[a] && s1[a] != c)
+		if (i == 0)
 		{
-			a++;
-			counter++;
+			result_array[i] = malloc(sizeof(char));
+			if (!result_array[i])
+				return (NULL);
+			result_array[i++][0] = '\0';
+			continue ;
 		}
-		result[i] = ft_substr(s1, start, counter);
-		if (!result[i])
-		{
-			free_array(result, i);
-			return (NULL);
-		}
-		i++;
+		result_array[i++] = get_next_word(s, c);
 	}
-	return (result);
+	result_array[i] = NULL;
+	return (result_array);
 }
 
-char	**ft_split(char const *s1, char c)
-{
-	char	**result;
-	size_t	words;
+// static int	colculated_words(const char *str, char c)
+// {
+// 	int	count;
+// 	int	i;
 
-	if (!s1)
-	{
-		return (NULL);
-	}
-	words = colculated_words(s1, c);
-	result = (char **)malloc(sizeof(char *) * (size_t)words + 1);
-	if (!result)
-	{
-		return (NULL);
-	}
-	return (extracting(s1, result, c, words));
-}
+// 	count = 0;
+// 	i = 0;
+// 	while (str[i])
+// 	{
+// 		if (str[i] != c)
+// 		{
+// 			count++;
+// 			while (str[i] && str[i] != c)
+// 				i++;
+// 		}
+// 		else
+// 			i++;
+// 	}
+// 	return (count);
+// }
+
+// static void	free_array(char **array, size_t i)
+// {
+// 	if (!array)
+// 		return ;
+// 	i = 0;
+// 	while (array[i] != NULL)
+// 	{
+// 		free(array[i]);
+// 		i++;
+// 	}
+// 	free(array);
+// }
+
+// static char	**extracting(const char *s1,
+// char **result, char c, size_t words)
+// {
+// 	size_t	i;
+// 	size_t	a;
+// 	size_t	counter;
+// 	size_t	start;
+
+// 	i = 0;
+// 	a = 0;
+// 	while (i < words)
+// 	{
+// 		counter = 0;
+// 		while (s1[a] && s1[a] == c)
+// 			a++;
+// 		start = a;
+// 		while (s1[a] && s1[a] != c)
+// 		{
+// 			a++;
+// 			counter++;
+// 		}
+// 		result[i] = ft_substr(s1, start, counter);
+// 		if (!result[i])
+// 		{
+// 			free_array(result, i);
+// 			return (NULL);
+// 		}
+// 		i++;
+// 	}
+// 	return (result);
+// }
+
+// char	**ft_split(char const *s1, char c)
+// {
+// 	char	**result;
+// 	size_t	words;
+
+// 	if (!s1)
+// 	{
+// 		return (NULL);
+// 	}
+// 	words = colculated_words(s1, c);
+// 	result = (char **)malloc(sizeof(char *) * (size_t)words + 1);
+// 	if (!result)
+// 	{
+// 		return (NULL);
+// 	}
+// 	return (extracting(s1, result, c, words));
+// }
 
 /*int ft_is_delimeter(char c)
 {
