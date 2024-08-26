@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/08/26 14:35:43 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:37:17 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,8 @@ char					*ft_itoa(int n);
 char					*ft_strmapi(char const *s1, char (*f)(unsigned int,
 								char));
 char					*ft_strjoin(char const *s1, char const *s2);
-char					**ft_split(char const *s1, char c);
-// char					**ft_split(char *s, char c);
+// char					**ft_split(char const *s1, char c);
+char					**ft_split(char *s, char c);
 char					*ft_strdup(const char *s1);
 char					*ft_substr(char const *s1, unsigned int start,
 							size_t len);
