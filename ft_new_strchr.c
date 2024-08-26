@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 13:05:25 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/07/09 13:14:00 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:33:55 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strchr2(const char *str, char c)
 		}
 		i++;
 	}
-	return (char *)str;
+	return ((char *)str);
 }
 
 // int main(void)

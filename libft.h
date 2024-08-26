@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 15:30:54 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/07/09 13:14:16 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:35:43 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 
 typedef struct s_ryusupov
 {
-	void*				window;
-	void*				context;
+	void				*window;
+	void				*context;
 	int					r_content;
 	int					i;
 	int					r_pos;
@@ -104,14 +104,14 @@ int						list_sorted(t_ryusupov *lst);
 /*---------------GET_NEXT_LINE------------------*/
 typedef struct t_struct
 {
-	int		new_l_buffer;
-	int		fd;
-}			t_struct;
+	int					new_l_buffer;
+	int					fd;
+}						t_struct;
 
-t_struct	*get_t_struct(int new_fd);
-char		*ft_strjoin_new(char *s1, char *s2);
-char		*ft_strndup(char *str, int start, int end);
-char		*get_next_line(int fd);
-int			new_line(char *str);
+t_struct				*get_t_struct(int new_fd);
+char					*ft_strjoin_new(char *s1, char *s2);
+char					*ft_strndup(char *str, int start, int end);
+char					*get_next_line(int fd);
+int						new_line(char *str);
 
 #endif

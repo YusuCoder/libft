@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 18:33:39 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/05/24 19:43:16 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 14:34:06 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,4 +90,3 @@ t_struct	*get_t_struct(int new_fd)
 	i->fd = new_fd;
 	return (i);
 }
-
