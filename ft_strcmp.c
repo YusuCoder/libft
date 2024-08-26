@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:16:30 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/08/26 15:09:21 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/08/26 19:15:46 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,3 @@ int	ft_strcmp(const char *str1, const char *str2)
 	}
 	return ((unsigned char)str1[i] - (unsigned char)str2[a]);
 }
-
